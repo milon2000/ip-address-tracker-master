@@ -1,7 +1,4 @@
-// zgarnac value
-// sciagnac z ta value lokalizacje
-// podmienic value w mapie
-// zwrocic nowy obiekt w mapie z nowa wartoscia
+
 
 // & value of input
 const submit = document.querySelector('.submit');
