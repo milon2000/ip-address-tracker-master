@@ -27,7 +27,7 @@ async function getLocation(url) {
     const data = await response.json();
     yourIP.innerHTML = data.ip;
     yourCity.innerHTML = `${data.location.city} ${data.location.country} ${data.location.postalCode}`;
-    yourTime.innerHTML = `UTC- ${data.location.timezone}`
+    yourTime.innerHTML = `UTC  ${data.location.timezone}`
     yourISP.innerHTML = data.isp;
 
     createMap(data);
