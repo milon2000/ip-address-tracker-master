@@ -19,7 +19,7 @@ Users are able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://github.com/milon2000/ip-address-tracker-master)
-- Live Site URL: [Add live site URL here](https://admiring-gates-00725a.netlify.app/)
+- Solution URL: [Code](https://github.com/milon2000/ip-address-tracker-master)
+- Live Site URL: [Live site](https://admiring-gates-00725a.netlify.app/)
 
 
