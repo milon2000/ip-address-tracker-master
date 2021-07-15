@@ -1,11 +1,15 @@
 // & value of input
 const submit = document.querySelector('.submit');
-const ip = document.querySelector('#ip');
+const ip = document.querySelector('#ip-input');
+const yourIP = document.querySelector('.your-ip');
+const yourCity = document.querySelector('.your-city');
+const yourTime = document.querySelector('.your-time');
+const yourISP = document.querySelector('.your-isp');
 
 // & funkcja, ktora pokazuje lokalizacje
 function createMap(data) {
     let view = [data.location.lat, data.location.lng];
-    map.setView(view, 13);
+    map.setView(view, 15);
     L.marker(view).addTo(map);
 }
 
@@ -14,7 +18,6 @@ function createMap(data) {
 function getIP(json) {
     let url = 'https://geo.ipify.org/api/v1?apiKey=at_4BM9B1l7yGQYtDcxk5yzFRXsxVPY8&ipAddress=' + json.ip;
     getLocation(url);
-    
 }
 
 // & sciaga url z danymi
@@ -22,7 +25,11 @@ function getIP(json) {
 async function getLocation(url) {
     const response = await fetch(url);
     const data = await response.json();
-    console.log(data.location.country);
+    yourIP.innerHTML = data.ip;
+    yourCity.innerHTML = `${data.location.city} ${data.location.country} ${data.location.postalCode}`;
+    yourTime.innerHTML = `UTC- ${data.location.timezone}`
+    yourISP.innerHTML = data.isp;
+
     createMap(data);
 }
 
@@ -62,7 +69,7 @@ L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_toke
 
 
 
- 
+
 
 
 

@@ -34,32 +34,40 @@ body {
     padding-bottom: 20px;
     font-size: 30px;
 }
+
 .ip-wrapper {
     position: absolute;
     top: 9%;
     left: 50%;
     transform: translate(-50%, -50%);
+    width: 40%;
+    margin: 0 auto;
 }
+
 .ip {
     border-radius: 10px;
     padding-right: 10px;
-background-color: #2B2B2B;
+    background-color: #2B2B2B;
+}
 
-}
 #ip-input {
-    border-radius: 5px 0px 0px 5px;
+    border-radius: 10px 0px 0px 10px;
     border: none;
-    width: 300px;
-    height: 40px;
+    width: 90%;
+    height: 50px;
+    padding: 16px;
+    ;
 }
+
 
 .submit {
     color: white;
     padding: 0.25em 0.5em;
     font-size: 1.25em;
-    cursor: pointer; 
+    cursor: pointer;
     vertical-align: middle;
 }
+
 /* data */
 .data-wrapper {
     z-index: 9999;
@@ -72,27 +80,35 @@ background-color: #2B2B2B;
     transform: translate(-50%, -50%);
     background-color: #fff;
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    text-align: left;
 }
+
 .item {
     flex: 1;
-    padding: 15px;;
+    padding: 15px;
+    ;
 }
+
 .item p:first-child {
     color: #969696;
     padding-bottom: 15px;
     text-transform: uppercase;
     font-size: 12px;
 }
+
 .item p:nth-child(2) {
     color: #2B2B2B;
     font-weight: 500;
     font-size: 18px;
 }
+
 .border {
     border-right: 2px solid #f2f2f2;
 }
+
 .attribution {
     font-size: 11px;
     text-align: center;
@@ -104,4 +120,46 @@ background-color: #2B2B2B;
 
 #map {
     height: 600px;
+}
+
+@media screen and (max-width: 920px) {
+    .ip-wrapper {
+        width: 57%;
+    }
+}
+
+@media screen and (max-width: 730px) {
+    .ip-wrapper {
+        width: 84%;
+    }
+
+    .data-wrapper {
+        flex-direction: column;
+        top: 40%;
+        text-align: center;
+    }
+
+    .border {
+        border: none;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .ip-wrapper {
+        width: 97%;
+    }
+
+    .ip {
+        width: 100%;
+    }
+
+    #ip-input {
+        width: 89%;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .ip-wrapper {
+        width: 100%;
+    }
 }
