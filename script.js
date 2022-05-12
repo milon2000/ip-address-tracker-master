@@ -16,7 +16,7 @@ function createMap(data) {
 // & pokazuje lokalizacje po zaladowaniu strony
 
 function getIP(json) {
-    let url = 'https://geo.ipify.org/api/v1?apiKey=at_4BM9B1l7yGQYtDcxk5yzFRXsxVPY8&ipAddress=' + json.ip;
+    let url = 'https://geo.ipify.org/api/v1?apiKey=at_TOeNfWSM45KVvs8MC2s9f9Xe5yx3d&ipAddress=' + json.ip;
     getLocation(url);
 }
 
@@ -39,11 +39,11 @@ function checkIP(e) {
     let url;
     e.preventDefault();
     if (/^\d+$/.test(ipValue) === true) {
-        url = 'https://geo.ipify.org/api/v1?apiKey=at_4BM9B1l7yGQYtDcxk5yzFRXsxVPY8&ipAddress=' + ipValue;
+        url = 'https://geo.ipify.org/api/v1?apiKey=at_TOeNfWSM45KVvs8MC2s9f9Xe5yx3d&ipAddress=' + ipValue;
     } else if (ipValue.includes('@')) {
-        url = 'https://geo.ipify.org/api/v1?apiKey=at_4BM9B1l7yGQYtDcxk5yzFRXsxVPY8&email=' + ipValue;
+        url = 'https://geo.ipify.org/api/v1?apiKey=at_TOeNfWSM45KVvs8MC2s9f9Xe5yx3d&email=' + ipValue;
     } else {
-        url = 'https://geo.ipify.org/api/v1?apiKey=at_4BM9B1l7yGQYtDcxk5yzFRXsxVPY8&domain=' + ipValue;
+        url = 'https://geo.ipify.org/api/v1?apiKey=at_TOeNfWSM45KVvs8MC2s9f9Xe5yx3d&domain=' + ipValue;
     }
 
     getLocation(url);
